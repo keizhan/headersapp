@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url)) // this is to handle f
 
 
 const app = express();
-const port = 3000;
+const port = 443;
 
 // My own middleware 
 function logger(req, res, next) {
