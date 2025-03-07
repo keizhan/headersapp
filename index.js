@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url)) // this is to handle f
 
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // My own middleware 
 function logger(req, res, next) {
@@ -46,5 +46,4 @@ app.post("/", (req, res) => {
 })
 
 
-module.exports = index.js
-//app.listen(port, () => {console.log(`Server running on port ${port}`)})
+app.listen(port, () => {console.log(`Server running on port ${port}`)})
